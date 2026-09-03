@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>A small question for Syamantak</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #f7f3eb;
+      color: #292725;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 60px auto;
+    }
+
+    /* little top label */
+
+    .small {
+      font-size: 13px;
+      color: #7c7771;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 1.1;
+      margin: 0 0 40px 0;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 18px 0;
+    }
+
+    .question {
+      margin-top: 40px;
+      margin-bottom: 22px;
+      font-size: 20px;
+      line-height: 1.35;
+      font-weight: bold;
+    }
+
+
+    /* ANSWER OPTIONS */
+
+    .options {
+      margin-top: 20px;
+    }
+
+    .option {
+      display: block;
+      padding: 15px 16px;
+      margin: 9px 0;
+
+      border: 1px solid #aaa39b;
+      background: #fffdf9;
+
+      cursor: pointer;
+
+      transition: background 0.15s ease;
+    }
+
+    .option:hover {
+      background: #f1e9e3;
+    }
+
+    .option input {
+      margin-right: 9px;
+      accent-color: #9a7181;
+    }
+
+    .option-text {
+      font-size: 16px;
+    }
+
+    .subtext {
+      display: block;
+      margin-left: 24px;
+      margin-top: 3px;
+
+      font-size: 13px;
+      color: #77716b;
+    }
+
+
+    /* NEVER OPTION */
+
+    .never-option {
+      cursor: default;
+    }
+
+    .never-option:hover {
+      background: #f1e9e3;
+    }
+
+    .never-option input {
+      cursor: not-allowed;
+    }
+
+    .never-message {
+      display: none;
+
+      margin-left: 24px;
+      margin-top: 6px;
+
+      font-size: 13px;
+      color: #a05f62;
+    }
+
+
+    /* BUTTON */
+
+    button {
+      margin-top: 25px;
+
+      padding: 10px 18px;
+
+      border: 1px solid #292725;
+      background: #292725;
+      color: white;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #a05f62;
+    }
+
+
+    /* SMALL NOTE */
+
+    .note {
+      margin-top: 40px;
+
+      font-size: 12px;
+      color: #8a837c;
+    }
+
+
+    .error {
+      display: none;
+
+      margin-top: 12px;
+
+      font-size: 13px;
+      color: #a05f62;
+    }
+
+
+    /* THANK YOU PAGE */
+
+    #thankYou {
+      display: none;
+    }
+
+    .divider {
+      border: 0;
+      border-top: 1px solid #d6cec5;
+      margin: 38px 0;
+    }
+
+    .thank-you {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .tiny {
+      font-size: 13px;
+      color: #77716b;
+    }
+
+    .back {
+      margin-top: 25px;
+
+      padding: 10px 18px;
+
+      border: 1px solid #292725;
+      background: #292725;
+      color: white;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+
+      cursor: pointer;
+    }
+
+    .back:hover {
+      background: #a05f62;
+    }
+
+    .thank-you-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .thank-you-buttons button {
+        margin-top: 0;
+    }
+
+    #finalGoodbye {
+        display: none;
+    }
+
+    .angry-raccoon {
+        margin: 30px 0;
+    }
+
+    .angry-raccoon img {
+        display: block;
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* A teeny bit of colour */
+
+    .accent {
+      display: inline-block;
+
+      padding: 1px 5px;
+
+      background: #e9d9dc;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 25px 18px;
+      }
+
+      .page {
+        margin: 35px auto;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .question {
+        font-size: 19px;
+      }
+
+      .thank-you-buttons {
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <div class="page">
+
+
+    <!-- QUESTION PAGE -->
+
+    <div id="questionPage">
+
+      <div class="small">
+        a very serious administrative matter
+      </div>
+
+      <h1>
+        A Very Important Question
+      </h1>
+
+      <p>
+        Hi Syamantak,
+      </p>
+
+      <p>
+        Unfortunately, you're leaving.
+      </p>
+
+      <p>
+        Which is sad and all, but it has created a fairly
+        significant administrative problem for me.
+      </p>
+
+      <p>
+        Specifically:
+      </p>
+
+
+      <div class="question">
+        How often am I allowed to bother you after tomorrow?
+      </div>
+
+
+      <div class="options">
+
+
+        <label class="option">
+
+          <input
+            type="radio"
+            name="answer"
+            value="year"
+          >
+
+          <span class="option-text">
+            Once a year
+          </span>
+
+          <span class="subtext">
+            We both have lives.
+          </span>
+
+        </label>
+
+
+        <label class="option">
+
+          <input
+            type="radio"
+            name="answer"
+            value="month"
+          >
+
+          <span class="option-text">
+            Once a month
+          </span>
+
+          <span class="subtext">
+            Seems reasonable.
+          </span>
+
+        </label>
+
+
+        <label class="option">
+
+          <input
+            type="radio"
+            name="answer"
+            value="genuine"
+          >
+
+          <span class="option-text">
+            Whenever I have a genuine career question
+          </span>
+
+          <span class="subtext">
+            I will attempt to exercise judgement.
+          </span>
+
+        </label>
+
+
+        <label class="option">
+
+          <input
+            type="radio"
+            name="answer"
+            value="anytime"
+          >
+
+          <span class="option-text">
+            Whenever
+          </span>
+
+          <span class="subtext">
+            I am choosing to interpret this as a lifetime commitment.
+          </span>
+
+        </label>
+
+
+        <!-- NEVER -->
+
+        <div
+          class="option never-option"
+          onclick="rejectNever()"
+        >
+
+          <input
+            type="radio"
+            disabled
+          >
+
+          <span class="option-text">
+            Never
+          </span>
+
+
+          <div
+            id="neverMessage"
+            class="never-message"
+          >
+            No. Please select a less unreasonable answer.
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div id="error" class="error">
+        Please select an answer. This is a very serious survey.
+      </div>
+
+
+      <button onclick="submitAnswer()">
+        Okay, noted
+      </button>
+
+
+      <div class="note">
+        *This survey is legally binding.<br>
+      </div>
+
+
+    </div>
+
+
+
+    <!-- THANK YOU PAGE -->
+
+    <div id="thankYou">
+
+
+      <div class="small">
+        response recorded
+      </div>
+
+
+      <h1 id="resultTitle">
+        Okay. Noted.
+      </h1>
+
+
+      <p id="resultText" class="thank-you">
+      </p>
+
+
+      <p>
+        But thank you for being a really incredible mentor:)
+     </p>
+
+    <p>
+        You've taught me an absurd amount. As I said, you've made me more of a
+        designer than my v elongated design degree ever did.
+    </p>
+
+    <p>
+        You were also somehow always available, no matter how small, stupid, or
+        naive the question was. You had a v nice way of making me figure things
+        out without making me feel like an idiot.
+    </p>
+
+    <p>
+        I'm slightly less scared of being wrong now. Still an overthinking coward, 
+        but a little better at knowing when to stand my ground and when I'm just being stubborn/bullshitting.
+    </p>
+
+    <p>
+        <em>“Have a fucking spine”</em> has also become ingrained. Need to work on
+        that one.
+    </p>
+
+    <p>
+        I have also absorbed your completely objective opinions. I will religiously
+        pass on that Admon is evil with brains, and therefore PSPN is worse.
+        <em>(Amongst other, stronger ones.)</em>
+    </p>
+
+    <p>
+        More than anything, I really admire how much you care about the things
+        you care about, and how unapologetically nerdy you are about them. I'll try
+        to carry some of that with me.
+    </p>
+
+    <p>
+        Thanks for all of the above. Good luck with everything ahead. I'll miss having you around:)
+    </p>
+
+    <p>
+        And I will, unfortunately, continue to have questions.
+    </p>
+
+
+      <p>
+        - <s>a raccoon that needs therapy</s> charvi
+      </p>
+
+
+    <div class="thank-you-buttons">
+        <button
+            class="back"
+            onclick="goBack()"
+        >
+            I would like to change my answer
+        </button>
+
+        <button
+            onclick="finalGoodbye()"
+        >
+            Heard. Say final goodbye.
+        </button>
+    </div>
+    </div>
+
+    <!-- FINAL GOODBYE PAGE -->
+
+    <div id="finalGoodbye">
+
+    <h1>
+        Oh, absolutely not.
+    </h1>
+
+    <div class="angry-raccoon">
+        <img
+        src="angry-raccoon.gif"
+        alt="angy rocket"
+        >
+    </div>
+
+    <p>
+        I did all this and you wanna say goodbye with a button?
+    </p>
+
+    <p>
+        Will not work.
+    </p>
+
+    <p>
+        I've received your response. Say goodbye in person,
+        or at least make me a site.
+    </p>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+
+    function rejectNever() {
+
+      const message =
+        document.getElementById("neverMessage");
+
+      message.style.display = "block";
+
+    }
+
+
+
+    function submitAnswer() {
+
+      const selected = document.querySelector(
+        'input[name="answer"]:checked'
+      );
+
+      const error = document.getElementById("error");
+
+      if (!selected) {
+
+        error.style.display = "block";
+
+        return;
+
+      }
+
+      error.style.display = "none";
+
+
+      const questionPage =
+        document.getElementById("questionPage");
+
+      const thankYou =
+        document.getElementById("thankYou");
+
+      const resultTitle =
+        document.getElementById("resultTitle");
+
+      const resultText =
+        document.getElementById("resultText");
+
+
+      if (selected.value === "year") {
+
+        resultTitle.innerText =
+        "Once a year. Fair.";
+
+        resultText.innerText =
+        "I'll make it count. Please expect a very well-researched list of questions sometime around this time next year.";
+
+      }
+
+
+      else if (selected.value === "month") {
+
+        resultTitle.innerText =
+          "Once a month. Generous enough.";
+
+        resultText.innerText =
+          "I'll try not to abuse this. I make no promises about the quality of the questions.";
+
+      }
+
+
+      else if (selected.value === "genuine") {
+
+        resultTitle.innerText =
+          "Good enough for me.";
+
+        resultText.innerText =
+            "I'll try to only bother you with actual career questions. The definition of “career question” may occasionally be stretched.";
+      }
+
+
+      else if (selected.value === "anytime") {
+
+        resultTitle.innerText =
+          "Excellent. Terrible Choice.";
+
+        resultText.innerText =
+          "I appreciate your confidence in my ability to exercise restraint. It is misplaced.";
+
+      }
+
+
+      questionPage.style.display = "none";
+
+      thankYou.style.display = "block";
+
+      window.scrollTo(0, 0);
+
+    }
+
+
+    async function finalGoodbye() {
+
+        document.getElementById("thankYou").style.display = "none";
+
+        document.getElementById("finalGoodbye").style.display = "block";
+
+        window.scrollTo(0, 0);
+
+        const selected = document.querySelector(
+            'input[name="answer"]:checked'
+        );
+
+        if (!selected) {
+            return;
+        }
+
+        try {
+
+            await fetch("https://formspree.io/f/mzebgolo", {
+
+            method: "POST",
+
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                answer: selected.value
+            })
+
+            });
+
+        } catch (error) {
+
+            console.log("Could not submit response:", error);
+
+        }
+
+        document.getElementById("thankYou").style.display = "none";
+
+        document.getElementById("finalGoodbye").style.display = "block";
+
+        window.scrollTo(0, 0);
+
+    }
+
+    function goBack() {
+
+      document.getElementById("thankYou").style.display = "none";
+
+      document.getElementById("questionPage").style.display = "block";
+
+      window.scrollTo(0, 0);
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
